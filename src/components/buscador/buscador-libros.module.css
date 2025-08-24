@@ -1,0 +1,38 @@
+.prestar-libro,
+.lista-resultados {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  gap: 1rem;
+
+  margin: 1rem;
+  padding: 1rem;
+  border-style: solid;
+  border-width: 0.1rem;
+  border-radius: 1rem;
+}
+.input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  margin: 1rem;
+}
+.lista-resultados {
+  gap: 0.5rem;
+  list-style: none;
+}
+.lista-resultados_btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+.lista-resultados_btn:hover {
+  text-decoration: underline;
+}
+.lista-resultados_btn:focus {
+  outline: none;
+  color: orange;
+}

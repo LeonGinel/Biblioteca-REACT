@@ -1,0 +1,26 @@
+.editar-libro_formulario {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  gap: 1rem;
+
+  margin: 1rem;
+  padding: 2rem;
+  border-style: solid;
+  border-width: 0.1rem;
+  border-radius: 1rem;
+}
+.editar-libro_inputs {
+  display: grid;
+  gap: 0.5rem;
+}
+.editar-libro_btns {
+  display: flex;
+  gap: 1rem;
+}
+.input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}

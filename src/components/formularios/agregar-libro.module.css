@@ -1,0 +1,20 @@
+.agregar-libro {
+  display: grid;
+  gap: 1rem;
+
+  padding: 1rem;
+  border-style: solid;
+  border-width: 0.1rem;
+  border-radius: 1rem;
+}
+.agregar-libro_inputs {
+  display: grid;
+  align-items: center;
+  gap: 0.5rem;
+}
+.input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}

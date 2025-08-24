@@ -1,0 +1,20 @@
+.libro-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+
+  margin: 2rem;
+  padding: 1rem;
+  border-style: solid;
+  border-width: 0.1rem;
+  border-radius: 1rem;
+}
+.libro-card_info {
+  display: grid;
+  gap: 0.5rem;
+}
+.libro-card_btns {
+  display: grid;
+  gap: 1rem;
+}
