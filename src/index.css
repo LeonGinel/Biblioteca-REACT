@@ -20,11 +20,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-html,
-body {
-  height: 100%;
-  font-family: Arial, sans-serif; /* O la que prefieras */
-}
 /* ----------------------------------------------------------------------------- */
 
 a {
