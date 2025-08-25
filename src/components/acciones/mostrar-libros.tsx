@@ -6,7 +6,7 @@ import { LibrosContext } from "../../contexts/libros-context";
 function MostrarLibros() {
   const { libros } = useContext(LibrosContext);
 
-  const [filtro, setFiltro] = useState<"todos" | "disponibles" | "retirados">("todos");
+  const [filtro, setFiltro] = useState<"todos" | "disponibles" | "retirados" | string>("todos");
 
   const abecedario: string[] = [
     "a",
@@ -37,8 +37,15 @@ function MostrarLibros() {
     "z",
   ];
 
-  const librosFiltrados =
-    filtro === "disponibles" ? libros.filter((l) => l.disponible) : filtro === "retirados" ? libros.filter((l) => !l.disponible) : libros;
+  let librosFiltrados = libros;
+
+  if (filtro === "disponibles") {
+    librosFiltrados = libros.filter((l) => l.disponible);
+  } else if (filtro === "retirados") {
+    librosFiltrados = libros.filter((l) => !l.disponible);
+  } else if (filtro.length === 1) {
+    librosFiltrados = libros.filter((l) => l.titulo.toLowerCase().startsWith(filtro.toLowerCase()));
+  }
 
   return (
     <div className={styles["mostrar-libros_panel"]}>
@@ -49,8 +56,10 @@ function MostrarLibros() {
       </div>
 
       <div className={styles["mostrar-libros_btons--abc"]}>
-        {abecedario.map((l) => (
-          <button>{l}</button>
+        {abecedario.map((letra) => (
+          <button key={letra} onClick={() => setFiltro(letra)}>
+            {letra.toUpperCase()}
+          </button>
         ))}
       </div>
 

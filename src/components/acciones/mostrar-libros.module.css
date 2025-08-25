@@ -16,6 +16,9 @@
 .mostrar-libros_btons--abc {
   gap: 0.3rem;
 }
+.mostrar-libros_btons--abc button {
+  padding: 0.6rem;
+}
 .lista-libros {
   list-style: none;
 }
