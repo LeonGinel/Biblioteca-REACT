@@ -1,0 +1,21 @@
+.mostrar-libros_panel {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+  border-style: solid;
+  border-width: 0.1rem;
+  border-radius: 1rem;
+}
+.mostrar-libros_btns,
+.mostrar-libros_btons--abc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.mostrar-libros_btons--abc {
+  gap: 0.3rem;
+}
+.lista-libros {
+  list-style: none;
+}

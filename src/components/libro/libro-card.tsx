@@ -1,10 +1,10 @@
 import styles from "./libro-card.module.css";
-import EliminarLibro from "../formularios/eliminar-libro";
+import EliminarLibro from "../acciones/eliminar-libro";
 import EditarLibro from "../formularios/editar-libros";
 import { useContext, useState } from "react";
 import { LibrosContext } from "../../contexts/libros-context";
 import type { Libro } from "../../types/libro-interface";
-import RetirarDevolverLibro from "../formularios/retirar-devolver";
+import RetirarDevolverLibro from "../acciones/retirar-devolver";
 
 function LibroCard({ libro }: { libro: Libro }) {
   const { libros, setLibros } = useContext(LibrosContext);

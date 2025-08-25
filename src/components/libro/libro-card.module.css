@@ -1,8 +1,8 @@
 .libro-card {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   align-items: center;
-  justify-items: center;
+  justify-content: center;
+  gap: 2rem;
 
   margin: 2rem;
   padding: 1rem;
@@ -16,5 +16,5 @@
 }
 .libro-card_btns {
   display: grid;
-  gap: 1rem;
+  gap: 0.5rem;
 }
