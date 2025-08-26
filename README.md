@@ -24,8 +24,21 @@ Perfecta como base para proyectos frontend escalables y bien estructurados.
 
 ---
 
-## Estructura del proyecto
+## Capturas del Proyecto
 
+### Pantalla principal
+![Home](screenshots/home.webp)
+
+### Formulario de agregar libro
+![Agregar libro](screenshots/agregar.webp)
+
+### Mostrar libros
+![Mostrar libros](screenshots/mostrar.webp)
+
+---
+
+## Estructura del proyecto
+```
 src/
 ├─ assets/            # Imágenes y recursos
 ├─ components/        # UI y funcionalidades
@@ -47,7 +60,7 @@ index.html
 package.json
 tsconfig.json
 vite.config.ts
-
+```
 ---
 
 ## Instalación
