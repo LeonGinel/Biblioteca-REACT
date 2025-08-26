@@ -27,7 +27,26 @@ Perfecta como base para proyectos frontend escalables y bien estructurados.
 ## Estructura del proyecto
 
 src/
-(pendiente de definir)
+├─ assets/            # Imágenes y recursos
+├─ components/        # UI y funcionalidades
+│  ├─ acciones/       # Botones y acciones sobre libros
+│  ├─ buscador/       # Buscador de libros
+│  ├─ formularios/    # Formularios de agregar/editar
+│  ├─ libro/          # Tarjeta de libro
+│  ├─ Panel-control/  # Panel de administración
+│  └─ saludo/         # Componente de bienvenida
+├─ contexts/          # Context API para libros
+├─ types/             # Interfaces y tipos TypeScript
+├─ App.tsx
+└─ main.tsx
+
+# Archivos raíz
+.gitignore
+README.md
+index.html
+package.json
+tsconfig.json
+vite.config.ts
 
 ---
 
