@@ -1,10 +1,12 @@
-#root {
-  background-color: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(0.5rem);
-  border-radius: 2rem;
-
+#root,
+#contenedor-principal {
   display: grid;
   margin: 5rem auto;
   padding: 2rem;
   text-align: center;
+}
+#contenedor-principal {
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(0.5rem);
+  border-radius: 2rem;
 }

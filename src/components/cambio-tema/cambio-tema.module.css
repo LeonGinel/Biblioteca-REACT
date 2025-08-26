@@ -1,0 +1,20 @@
+.cambiar-tema_btn {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 100;
+
+  width: 3rem; /* ancho fijo */
+  height: 3rem; /* alto fijo */
+  padding: 0; /* sin padding */
+  border-radius: 50%; /* redondo */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cambiar-tema_btn img {
+  width: 80%; /* ocupar la mayor parte del botón */
+  height: auto; /* mantener proporción */
+}
