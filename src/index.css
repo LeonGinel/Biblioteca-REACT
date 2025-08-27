@@ -14,16 +14,26 @@
 }
 
 [theme="light"] {
-  --bg-img: url("/fondo.webp");
   --color-text: white;
   --color-btns: #1a1a1a;
   --color-btns_hover: #646cff;
 }
+[theme="light"] body::before {
+  opacity: 1; /* capa clara visible */
+}
+[theme="light"] body::after {
+  opacity: 0; /* capa oscura invisible */
+}
 [theme="dark"] {
-  --bg-img: url("/fondo-oscuro.webp");
   --color-text: #cfcfcf;
   --color-btns: #525252;
   --color-btns_hover: orange;
+}
+[theme="dark"] body::before {
+  opacity: 0; /* capa clara invisible */
+}
+[theme="dark"] body::after {
+  opacity: 1; /* capa oscura visible */
 }
 
 /* --------------------------------------------------------------------------- */
@@ -54,18 +64,28 @@ body {
 
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
 }
-body::before {
+body::before,
+body::after {
   content: "";
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: var(--bg-img);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  opacity: 0.8; /* Solo la imagen de fondo se vuelve más tenue */
+  opacity: 0.8;
+  transition: opacity 1.5s ease;
   z-index: -1;
+}
+body::before {
+  background-image: url("/fondo.webp"); /* siempre la imagen "clara" */
+  opacity: 1;
+}
+
+body::after {
+  background-image: url("/fondo-oscuro.webp"); /* siempre la imagen "oscura" */
+  opacity: 0;
 }
 
 h1 {
