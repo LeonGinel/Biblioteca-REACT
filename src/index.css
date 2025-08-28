@@ -21,7 +21,7 @@
   --sombra-btns: 0 0 0 rgba(255, 255, 0, 0);
 }
 [theme="light"] body::before {
-  opacity: 0.8; /* capa clara visible */
+  opacity: 0.7; /* capa clara visible */
   filter: blur(0.06rem);
 }
 [theme="light"] body::after {

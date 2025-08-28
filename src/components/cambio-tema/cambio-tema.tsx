@@ -13,8 +13,8 @@
 
 import styles from "./cambio-tema.module.css";
 import { type Dispatch, type SetStateAction } from "react";
-import sol from "../../assets/sol.webp";
-import luna from "../../assets/luna.webp";
+import sol from "../../assets/luna.webp";
+import luna from "../../assets/sol.webp";
 
 export default function CambiarTema({ tema, setTema }: { tema: "light" | "dark"; setTema: Dispatch<SetStateAction<"light" | "dark">> }) {
   // Función que alterna el tema
