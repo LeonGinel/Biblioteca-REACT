@@ -3,24 +3,25 @@
 Biblioteca de componentes en React y TypeScript, diseñada para construir **interfaces modulares, reutilizables y tipadas de forma consistente**.  
 Perfecta como base para proyectos frontend escalables y bien estructurados.
 
----
-
-## Tecnologías
-
-- React
-- TypeScript
-- Vite
-- Node.js
+🔗 **Demo online:** [Biblioteca React + TS](https://biblioteca-react-ts.netlify.app/)
 
 ---
 
-## Objetivos
+## Estado y notas importantes
 
-- Desarrollar componentes reutilizables y escalables.
-- Aplicar tipado fuerte con TypeScript.
-- Seguir un enfoque modular y mantenible.
-- Mantener el proyecto en evolución continua como parte de un portfolio profesional.
-- Demostrar buenas prácticas en desarrollo frontend moderno.
+Este proyecto está **activo y en desarrollo**, con incorporación progresiva de nuevos componentes y mejoras.  
+Ideal para probar y extender en otros proyectos frontend.
+
+Algunas de las características y mejoras planificadas incluyen:
+
+- Diseño **responsive** para adaptarse a móviles, tablets y escritorio.
+- Implementación de **validaciones y medidas de seguridad**.
+- Funcionalidades de **login y registro de usuarios**.
+- Integración de **más productos**: películas, series, juegos, etc.
+- **Opción de descarga** de contenidos o datos.
+- Y muchas otras mejoras y funcionalidades adicionales (**ETC**).
+
+Estas actualizaciones reflejan el trabajo activo en el proyecto y su crecimiento progresivo.
 
 ---
 
@@ -35,6 +36,40 @@ Perfecta como base para proyectos frontend escalables y bien estructurados.
 ### Mostrar libros
 ![Mostrar libros](screenshots/mostrar.webp)
 
+### Tema oscuro
+![Tema oscuro](screenshots/tema-oscuro.webp)
+
+---
+
+## Tecnologías
+
+- React
+- TypeScript
+- Vite
+- Node.js
+
+---
+
+## Objetivos
+
+- Desarrollar componentes **reutilizables y escalables**.  
+- Aplicar **tipado fuerte con TypeScript** para mayor seguridad y mantenibilidad.  
+- Seguir un enfoque **modular y fácil de mantener**.  
+- Mantener el proyecto en **evolución continua** como parte de un portfolio profesional.  
+- Demostrar **buenas prácticas en desarrollo frontend moderno**.
+
+---
+
+## Funcionalidades principales
+
+- Agregar, editar y eliminar libros.  
+- Cambiar disponibilidad de libros (**retirar / devolver**).  
+- Filtrado de libros por estado y por letra inicial.  
+- Buscador en tiempo real.  
+- Cambio de tema **claro / oscuro**.  
+- Panel de control con selección de secciones.  
+- Estado persistente usando **LocalStorage**.
+
 ---
 
 ## Estructura del proyecto
@@ -44,6 +79,7 @@ src/
 ├─ components/        # UI y funcionalidades
 │  ├─ acciones/       # Botones y acciones sobre libros
 │  ├─ buscador/       # Buscador de libros
+│  ├─ cambiar-tema/   # Cambiar entre modo claro y oscuro
 │  ├─ formularios/    # Formularios de agregar/editar
 │  ├─ libro/          # Tarjeta de libro
 │  ├─ Panel-control/  # Panel de administración
@@ -73,13 +109,6 @@ vite.config.ts
 
 3. Ejecutar en desarrollo:
    `npm run dev`
-
----
-
-## Estado
-
-Proyecto en evolución continua, con incorporación progresiva de nuevos componentes y mejoras.  
-Ideal para probar y extender en otros proyectos frontend.
 
 ---
 
