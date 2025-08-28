@@ -16,10 +16,13 @@
 [theme="light"] {
   --color-text: white;
   --color-btns: #1a1a1a;
-  --color-btns_hover: #646cff;
+  --color-btns_hover: #525252;
+  --color-border--btns_hover: #646cff;
+  --sombra-btns: 0 0 0 rgba(255, 255, 0, 0);
 }
 [theme="light"] body::before {
-  opacity: 1; /* capa clara visible */
+  opacity: 0.8; /* capa clara visible */
+  filter: blur(0.06rem);
 }
 [theme="light"] body::after {
   opacity: 0; /* capa oscura invisible */
@@ -27,7 +30,10 @@
 [theme="dark"] {
   --color-text: #cfcfcf;
   --color-btns: #525252;
-  --color-btns_hover: orange;
+  --color-btns_hover: #1a1a1a;
+  --color-border--btns_hover: orange;
+  /* --sombra-btns: 0 0 5px 1px rgba(247, 233, 151, 1); */
+  --sombra-btns_hover: 0 0 10px 2px rgba(255, 220, 82, 1);
 }
 [theme="dark"] body::before {
   opacity: 0; /* capa clara invisible */
@@ -62,6 +68,8 @@ body {
   min-width: 320px;
   min-height: 100vh;
 
+  color: var(--color-text);
+  transition: color 2s ease;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
 }
 body::before,
@@ -74,18 +82,16 @@ body::after {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  opacity: 0.8;
-  transition: opacity 1.5s ease;
+  opacity: 1;
+  transition: opacity 2s ease, color 2s ease;
   z-index: -1;
 }
 body::before {
   background-image: url("/fondo.webp"); /* siempre la imagen "clara" */
-  opacity: 1;
 }
 
 body::after {
   background-image: url("/fondo-oscuro.webp"); /* siempre la imagen "oscura" */
-  opacity: 0;
 }
 
 h1 {
@@ -102,14 +108,16 @@ button {
   font-family: inherit;
   background-color: var(--color-btns);
   cursor: pointer;
-  transition: border-color 0.25s;
+  box-shadow: var(--sombra-btns);
+}
+button.tema-transicion {
+  transition: background-color 2s ease, box-shadow 0.2s ease;
 }
 button:hover {
-  border-color: var(--color-btns_hover);
-}
-button:focus,
-button:focus-visible {
-  outline: 0.1rem solid var(--color-btns_hover);
+  background-color: var(--color-btns_hover);
+  border-color: var(--color-border--btns_hover);
+  box-shadow: var(--sombra-btns_hover);
+  transition: none;
 }
 
 @media (prefers-color-scheme: light) {

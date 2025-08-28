@@ -1,20 +1,23 @@
-.cambiar-tema_btn {
+.contenedor {
   position: fixed;
-  bottom: 1rem;
-  right: 1rem;
+  bottom: 3vw;
+  right: 3vw;
   z-index: 100;
 
-  width: 3rem; /* ancho fijo */
-  height: 3rem; /* alto fijo */
-  padding: 0; /* sin padding */
-  border-radius: 50%; /* redondo */
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(0.5rem);
+  border-radius: 50%;
+}
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.cambiar-tema_btn {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 50%;
 }
 
 .cambiar-tema_btn img {
-  width: 80%; /* ocupar la mayor parte del botón */
-  height: auto; /* mantener proporción */
+  width: 100%; /* que la imagen llene el botón */
+  height: 100%;
+  object-fit: contain; /* mantiene la proporción */
+  display: block;
 }
