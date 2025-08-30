@@ -14,7 +14,7 @@ Ideal para probar y extender en otros proyectos frontend.
 
 Algunas de las características y mejoras planificadas incluyen:
 
-- Diseño **responsive** para adaptarse a móviles, tablets y escritorio.
+- Diseño **responsive** para adaptarse a móviles, tablets y escritorio. ✅  
 - Implementación de **validaciones y medidas de seguridad**.
 - Funcionalidades de **login y registro de usuarios**.
 - Integración de **más productos**: películas, series, juegos, etc.
@@ -39,6 +39,9 @@ Estas actualizaciones reflejan el trabajo activo en el proyecto y su crecimiento
 ### Tema oscuro
 ![Tema oscuro](screenshots/tema-oscuro.webp)
 
+### Diseño Responsive
+![Diseño responsive](screenshots/responsive.webp)
+
 ---
 
 ## Tecnologías
@@ -57,6 +60,7 @@ Estas actualizaciones reflejan el trabajo activo en el proyecto y su crecimiento
 - Seguir un enfoque **modular y fácil de mantener**.  
 - Mantener el proyecto en **evolución continua** como parte de un portfolio profesional.  
 - Demostrar **buenas prácticas en desarrollo frontend moderno**.
+- Garantizar un **diseño responsive**, optimizado para cualquier dispositivo. ✅  
 
 ---
 
@@ -69,6 +73,7 @@ Estas actualizaciones reflejan el trabajo activo en el proyecto y su crecimiento
 - Cambio de tema **claro / oscuro**.  
 - Panel de control con selección de secciones.  
 - Estado persistente usando **LocalStorage**.
+- Soporte completo **responsive**, adaptándose a móviles, tablets y escritorio. ✅
 
 ---
 
