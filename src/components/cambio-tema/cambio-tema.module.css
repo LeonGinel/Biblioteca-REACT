@@ -1,7 +1,7 @@
 .contenedor {
   position: fixed;
-  bottom: 3vw;
-  right: 3vw;
+  bottom: 2vw;
+  right: 2vw;
   z-index: 100;
 
   background-color: rgba(0, 0, 0, 0.2);
@@ -10,8 +10,8 @@
 }
 
 .cambiar-tema_btn {
-  margin: 0.5rem;
-  padding: 0.5rem;
+  margin: 0.2rem;
+  padding: 0.2rem;
   border-radius: 50%;
 }
 
@@ -20,4 +20,39 @@
   height: 100%;
   object-fit: contain; /* mantiene la proporción */
   display: block;
+}
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 786px) {
+  .contenedor {
+    position: fixed;
+    bottom: 3vw;
+    right: 3vw;
+    z-index: 100;
+
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(0.5rem);
+    border-radius: 50%;
+  }
+
+  .cambiar-tema_btn {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+  }
+
+  .cambiar-tema_btn img {
+    width: 100%; /* que la imagen llene el botón */
+    height: 100%;
+    object-fit: contain; /* mantiene la proporción */
+    display: block;
+  }
+}
+
+@media (min-width: 1024px) {
+}
+
+@media (min-width: 1440px) {
 }

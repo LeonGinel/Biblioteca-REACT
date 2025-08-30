@@ -13,6 +13,25 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* -------------------------------------------------------------------------------------------------------------- */
+/* Resteo valores globales (para evitar problemas de estilos futuros) */
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  height: auto;
+  overflow-x: hidden;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* -------------------------------------------------------------------------------------------------------------- */
+/* Configuración de las variables que se usaran en los cambios de tema */
 [theme="light"] {
   --color-text: white;
   --color-btns: #1a1a1a;
@@ -21,11 +40,11 @@
   --sombra-btns: 0 0 0 rgba(255, 255, 0, 0);
 }
 [theme="light"] body::before {
-  opacity: 0.7; /* capa clara visible */
+  opacity: 0.7;
   filter: blur(0.06rem);
 }
 [theme="light"] body::after {
-  opacity: 0; /* capa oscura invisible */
+  opacity: 0;
 }
 [theme="dark"] {
   --color-text: #cfcfcf;
@@ -41,15 +60,7 @@
 [theme="dark"] body::after {
   opacity: 1; /* capa oscura visible */
 }
-
-/* --------------------------------------------------------------------------- */
-/* Reset CSS básico */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-/* ----------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------------------------------- */
 
 a {
   font-weight: 500;
@@ -62,11 +73,11 @@ a:hover {
 
 body {
   position: relative;
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
+  display: grid;
+  place-items: center; /* center en ambas direcciones */
   min-height: 100vh;
+  height: auto;
+  font-size: 0.8rem;
 
   color: var(--color-text);
   transition: color 2s ease;
@@ -95,15 +106,13 @@ body::after {
 }
 
 h1 {
-  font-size: 3.2em;
   line-height: 1.1;
 }
 
 button {
-  border-radius: 8px;
+  border-radius: 0.6rem;
+  padding: 0.5em 1em;
   border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
   font-weight: 500;
   font-family: inherit;
   background-color: var(--color-btns);
@@ -120,15 +129,24 @@ button:hover {
   transition: none;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
+/* RESPONSIVE INDEX */
+
+@media (min-width: 786px) {
+  body {
+    font-size: 1.1rem;
   }
   button {
-    background-color: #f9f9f9;
+    border-radius: 0.8rem;
+    padding: 0.5em 1.1em;
+    font-size: 1em;
   }
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 3em;
+  }
+}
+
+@media (min-width: 1440px) {
 }

@@ -1,5 +1,7 @@
 .agregar-libro {
   display: grid;
+  align-items: center;
+  justify-items: center;
   gap: 1rem;
 
   padding: 1rem;
@@ -17,4 +19,36 @@
   align-items: center;
   justify-content: center;
   gap: 1rem;
+}
+.ano input,
+.check input {
+  width: 20%;
+}
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 786px) {
+  .agregar-libro {
+    display: grid;
+    gap: 1rem;
+
+    padding: 1rem;
+    border-style: solid;
+  }
+  .agregar-libro_inputs {
+    width: 100%;
+  }
+  .input {
+    font-size: 1.2em;
+  }
+  .check input {
+    transform: scale(1.3);
+  }
+}
+
+@media (min-width: 1024px) {
+}
+
+@media (min-width: 1440px) {
 }

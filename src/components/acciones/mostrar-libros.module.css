@@ -1,5 +1,7 @@
 .mostrar-libros_panel {
   display: grid;
+  align-items: center;
+  justify-items: center;
   gap: 1rem;
   padding: 1rem;
   border-style: solid;
@@ -12,6 +14,7 @@
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 .mostrar-libros_btons--abc {
   gap: 0.2rem;
@@ -21,4 +24,44 @@
 }
 .lista-libros {
   list-style: none;
+  min-width: 70%;
+}
+.lista-libros > li {
+  display: grid;
+}
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 786px) {
+  .mostrar-libros_panel {
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+    border-style: solid;
+    border-width: 0.1rem;
+    border-radius: 1rem;
+  }
+  .mostrar-libros_btns,
+  .mostrar-libros_btons--abc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .mostrar-libros_btons--abc {
+    gap: 0.2rem;
+  }
+  .mostrar-libros_btons--abc button {
+    padding: 0.3rem;
+  }
+  .lista-libros {
+    list-style: none;
+  }
+}
+
+@media (min-width: 1024px) {
+}
+
+@media (min-width: 1440px) {
 }

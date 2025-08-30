@@ -1,25 +1,27 @@
 .buscar-libro,
 .lista-resultados {
-  display: grid;
-  align-items: center;
-  justify-items: center;
+  display: inline-block;
   gap: 1rem;
-
-  margin: 1rem;
-  padding: 1rem;
+  border-radius: 1rem;
+}
+.lista-resultados {
+  padding: 0.5em;
+  background-color: rgba(128, 128, 128, 0.5);
+}
+.buscar-libro {
+  width: 80%;
   border-style: solid;
   border-width: 0.1rem;
-  border-radius: 1rem;
+  padding: 1.2em;
 }
 .input {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
-
-  margin: 1rem;
 }
 .lista-resultados {
+  margin-top: 1em;
   gap: 0.5rem;
   list-style: none;
 }
@@ -30,9 +32,35 @@
   cursor: pointer;
 }
 .lista-resultados_btn:hover {
-  text-decoration: underline;
+  background-color: #1a1a1a;
 }
 .lista-resultados_btn:focus {
   outline: none;
   color: orange;
+}
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 786px) {
+  .buscar-libro {
+    padding: 1.5rem;
+  }
+  .input {
+    font-size: 1.2em;
+  }
+  input {
+    width: 60%;
+  }
+  .lista-resultados {
+    padding: 0.2;
+    gap: 0.5rem;
+    list-style: none;
+  }
+}
+
+@media (min-width: 1024px) {
+}
+
+@media (min-width: 1440px) {
 }

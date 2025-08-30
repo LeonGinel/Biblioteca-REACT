@@ -65,25 +65,25 @@ export default function AgregarLibro() {
 
         <div className={styles["agregar-libro_inputs"]}>
           {/* Input para el título */}
-          <div className={styles["input"]}>
+          <div className={`${styles["input"]} ${styles["titulo"]}`}>
             <label>Título:</label>
             <input type="text" placeholder="Título" value={titulo} onChange={(e) => setTitulo(e.target.value)} required />
           </div>
 
           {/* Input para el autor */}
-          <div className={styles["input"]}>
+          <div className={`${styles["input"]} ${styles["autor"]}`}>
             <label>Autor:</label>
             <input type="text" placeholder="Autor" value={autor} onChange={(e) => setAutor(e.target.value)} />
           </div>
 
           {/* Input para el año de publicación */}
-          <div className={styles["input"]}>
+          <div className={`${styles["input"]} ${styles["ano"]}`}>
             <label>Año de publicación:</label>
             <input type="number" value={ano} onChange={(e) => setAno(Number(e.target.value))} />
           </div>
 
           {/* Checkbox de disponibilidad */}
-          <div className={styles["input"]}>
+          <div className={`${styles["input"]} ${styles["check"]}`}>
             <label>Disponibilidad:</label>
             <input type="checkbox" checked={disponible} onChange={(e) => setDisponible(e.target.checked)} />
           </div>
@@ -91,7 +91,7 @@ export default function AgregarLibro() {
 
         {/* Botón de enviar */}
         <div>
-          <button type="submit">Agregar</button>
+          <button type="submit">Confirmar</button>
         </div>
       </form>
     </div>

@@ -57,15 +57,14 @@ export default function PanelControl() {
       </div>
 
       {/* Renderizado condicional según la sección activa */}
-      <div>
-        <div>{seccionActiva === "mostrar" && <MostrarLibros />}</div>
-        <div>{seccionActiva === "agregar" && <AgregarLibro />}</div>
-        <div>
-          {seccionActiva === "buscar" && <BuscadorLibros onSelect={(l) => setLibroSeleccionadoBuscador(l)} />}
 
-          {/* Mostrar la tarjeta del libro seleccionado en el buscador */}
-          {libroSeleccionadoBuscador === null ? <></> : <LibroCard libro={libroSeleccionadoBuscador} />}
-        </div>
+      <div>{seccionActiva === "mostrar" && <MostrarLibros />}</div>
+      <div>{seccionActiva === "agregar" && <AgregarLibro />}</div>
+      <div className={styles["contenedor"]}>
+        {seccionActiva === "buscar" && <BuscadorLibros onSelect={(l) => setLibroSeleccionadoBuscador(l)} />}
+
+        {/* Mostrar la tarjeta del libro seleccionado en el buscador */}
+        {libroSeleccionadoBuscador === null ? <></> : <LibroCard libro={libroSeleccionadoBuscador} />}
       </div>
     </div>
   );

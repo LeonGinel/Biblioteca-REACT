@@ -1,12 +1,30 @@
-#root,
-#contenedor-principal {
-  display: grid;
-  margin: 5rem auto;
-  padding: 2rem;
-  text-align: center;
+#root {
+  display: block;
+  width: fit-content;
 }
 #contenedor-principal {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  margin: 3rem 1rem;
+  padding: 1rem 1rem;
+
   background-color: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(0.5rem);
-  border-radius: 2rem;
+  border-radius: 1rem;
+}
+
+@media (min-width: 786px) {
+  #contenedor-principal {
+    margin: 5rem auto;
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+}
+
+@media (min-width: 1440px) {
 }

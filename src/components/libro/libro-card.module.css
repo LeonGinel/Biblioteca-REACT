@@ -1,10 +1,12 @@
 .libro-card {
-  display: flex;
+  display: grid;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+  gap: 1rem;
+  min-width: fit-content;
+  max-width: 95%;
 
-  margin: 2rem;
+  margin: 2rem 0.5rem;
   padding: 1rem;
   border-style: solid;
   border-width: 0.1rem;
@@ -15,6 +17,32 @@
   gap: 0.5rem;
 }
 .libro-card_btns {
-  display: grid;
+  display: flex;
   gap: 0.5rem;
+}
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 786px) {
+  .libro-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .libro-card_info {
+    display: grid;
+    gap: 0.5rem;
+  }
+  .libro-card_btns {
+    display: grid;
+    gap: 0.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+}
+
+@media (min-width: 1440px) {
 }
