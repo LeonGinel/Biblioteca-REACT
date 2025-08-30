@@ -27,11 +27,11 @@ Estas actualizaciones reflejan el trabajo activo en el proyecto y su crecimiento
 
 ## Capturas del Proyecto
 
-### Pantalla principal
-![Home](screenshots/home.webp)
-
 ### Formulario de agregar libro
 ![Agregar libro](screenshots/agregar.webp)
+
+### Búsqueda
+![busqueda](screenshots/busqueda.webp)
 
 ### Mostrar libros
 ![Mostrar libros](screenshots/mostrar.webp)
