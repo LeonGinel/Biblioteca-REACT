@@ -116,6 +116,7 @@ button {
   font-weight: 500;
   font-family: inherit;
   background-color: var(--color-btns);
+  color: var(--color-text);
   cursor: pointer;
   box-shadow: var(--sombra-btns);
 }
