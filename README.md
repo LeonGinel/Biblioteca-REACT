@@ -104,7 +104,7 @@ vite.config.ts
 ```
 ---
 
-## Instalación
+## Instalación 
 
 1. Clonar el repositorio:
    `git clone https://github.com/LeonGinel/react-biblioteca.git`
@@ -117,7 +117,7 @@ vite.config.ts
 
 ---
 
-## Autor
+## Autor 
 
 León – Desarrollador Frontend  
 [GitHub](https://github.com/LeonGinel) | [LinkedIn](https://linkedin.com/in/leonginel)
