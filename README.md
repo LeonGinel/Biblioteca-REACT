@@ -1,4 +1,4 @@
-# Biblioteca de Componentes en React + TypeScript
+# Biblioteca de Componentes en React + TypeScript 
 
 Biblioteca de componentes en React y TypeScript, diseñada para construir **interfaces modulares, reutilizables y tipadas de forma consistente**.  
 Perfecta como base para proyectos frontend escalables y bien estructurados.
@@ -7,7 +7,7 @@ Perfecta como base para proyectos frontend escalables y bien estructurados.
 
 ---
 
-## Estado y notas importantes
+## Estado y notas importantes 
 
 Este proyecto está **activo y en desarrollo**, con incorporación progresiva de nuevos componentes y mejoras.  
 Ideal para probar y extender en otros proyectos frontend.
