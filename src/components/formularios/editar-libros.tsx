@@ -67,28 +67,28 @@ export default function EditarLibro({ libro, cerrar }: { libro: Libro; cerrar: (
   return (
     <div>
       <form className={styles["editar-libro_formulario"]} onSubmit={handleSubmit}>
-        <div className={styles["editar-libro_inputs"]}>
+        <fieldset className={styles["editar-libro_inputs"]}>
           {/* Inputs para editar cada campo */}
-          <div className={styles["input"]}>
-            <label>Editar título:</label>
+          <div className={`${styles["input"]} ${styles["titulo"]}`}>
+            <label>Título:</label>
             <input type="text" placeholder="Título" value={titulo} onChange={(e) => setTitulo(e.target.value)} />
           </div>
 
-          <div className={styles["input"]}>
-            <label>Editar autor:</label>
+          <div className={`${styles["input"]} ${styles["autor"]}`}>
+            <label>Autor:</label>
             <input type="text" placeholder="Autor" value={autor} onChange={(e) => setAutor(e.target.value)} />
           </div>
 
-          <div className={styles["input"]}>
-            <label>Editar año de publicación:</label>
+          <div className={`${styles["input"]} ${styles["ano"]}`}>
+            <label>Año de publicación:</label>
             <input type="number" value={ano} onChange={(e) => setAno(Number(e.target.value))} />
           </div>
 
-          <div className={styles["input"]}>
-            <label>Editar disponibilidad:</label>
+          <div className={`${styles["input"]} ${styles["check"]}`}>
+            <label>Disponibilidad:</label>
             <input type="checkbox" checked={disponible} onChange={(e) => setDisponible(e.target.checked)} />
           </div>
-        </div>
+        </fieldset>
 
         {/* Botones de acción */}
         <div className={styles["editar-libro_btns"]}>

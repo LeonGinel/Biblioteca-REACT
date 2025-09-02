@@ -1,7 +1,7 @@
 .mostrar-libros_panel {
   display: grid;
   align-items: center;
-  justify-items: center;
+  justify-content: center;
   gap: 1rem;
   padding: 1rem;
   border-style: solid;
@@ -13,55 +13,43 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
   flex-wrap: wrap;
+}
+.mostrar-libros_btns {
+  gap: 0.7rem;
 }
 .mostrar-libros_btons--abc {
   gap: 0.2rem;
 }
 .mostrar-libros_btons--abc button {
-  padding: 0.3rem;
+  padding: 0.1rem 0.4rem;
+  border-radius: 0.6em;
 }
 .lista-libros {
-  list-style: none;
-  min-width: 70%;
-}
-.lista-libros > li {
   display: grid;
+  list-style: none;
 }
 
 @media (min-width: 576px) {
+  .mostrar-libros_btons--abc button {
+    padding: 0.2em 0.5rem;
+    border-radius: 0.6rem;
+  }
+  .mostrar-libros {
+    margin: 1em 0;
+  }
 }
 
 @media (min-width: 786px) {
-  .mostrar-libros_panel {
-    display: grid;
+  .mostrar-libros_btns {
     gap: 1rem;
-    padding: 1rem;
-    border-style: solid;
-    border-width: 0.1rem;
-    border-radius: 1rem;
-  }
-  .mostrar-libros_btns,
-  .mostrar-libros_btons--abc {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-  }
-  .mostrar-libros_btons--abc {
-    gap: 0.2rem;
   }
   .mostrar-libros_btons--abc button {
-    padding: 0.3rem;
+    padding: 0.2em 0.3em;
+    border-radius: 0.8rem;
   }
-  .lista-libros {
-    list-style: none;
+  li {
+    display: block;
+    place-items: center;
   }
-}
-
-@media (min-width: 1024px) {
-}
-
-@media (min-width: 1440px) {
 }

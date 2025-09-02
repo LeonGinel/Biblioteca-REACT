@@ -3,16 +3,7 @@
 }
 
 @media (min-width: 576px) {
-}
-
-@media (min-width: 786px) {
   .saludo {
-    margin: 1rem;
+    margin: 0.8rem;
   }
-}
-
-@media (min-width: 1024px) {
-}
-
-@media (min-width: 1440px) {
 }

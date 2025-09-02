@@ -1,30 +1,43 @@
 #root {
-  display: block;
-  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 #contenedor-principal {
   display: grid;
   align-items: center;
-  justify-content: center;
+  justify-items: center;
   text-align: center;
-
-  margin: 3rem 1rem;
-  padding: 1rem 1rem;
+  padding: 1rem;
+  max-width: 450px;
 
   background-color: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(0.5rem);
   border-radius: 1rem;
 }
 
+@media (min-width: 576px) {
+  #contenedor-principal {
+    max-width: 550px;
+    padding: 1rem;
+  }
+  h1 {
+    font-size: 2.1em;
+  }
+}
+
 @media (min-width: 786px) {
   #contenedor-principal {
-    margin: 5rem auto;
+    max-width: 800px;
     padding: 2rem;
+  }
+  h1 {
+    font-size: 2.2em;
   }
 }
 
 @media (min-width: 1024px) {
-}
-
-@media (min-width: 1440px) {
+  h1 {
+    font-size: 3em;
+  }
 }

@@ -27,7 +27,7 @@ export default function PanelControl() {
   const [libroSeleccionadoBuscador, setLibroSeleccionadoBuscador] = useState<Libro | null>(null);
 
   return (
-    <div>
+    <div className={styles["contenedor-panel"]}>
       {/* Botones del panel para cambiar de sección */}
       <div className={styles["panel-control"]}>
         <button
@@ -58,9 +58,9 @@ export default function PanelControl() {
 
       {/* Renderizado condicional según la sección activa */}
 
-      <div>{seccionActiva === "mostrar" && <MostrarLibros />}</div>
-      <div>{seccionActiva === "agregar" && <AgregarLibro />}</div>
-      <div className={styles["contenedor"]}>
+      <div className={styles["contenedor-mostrar"]}>{seccionActiva === "mostrar" && <MostrarLibros />}</div>
+      <div className={styles["contenedor-agregar"]}>{seccionActiva === "agregar" && <AgregarLibro />}</div>
+      <div className={styles["contenedor-buscador"]}>
         {seccionActiva === "buscar" && <BuscadorLibros onSelect={(l) => setLibroSeleccionadoBuscador(l)} />}
 
         {/* Mostrar la tarjeta del libro seleccionado en el buscador */}
