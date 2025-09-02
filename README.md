@@ -10,16 +10,21 @@ Perfecta como base para proyectos frontend escalables y bien estructurados.
 ## Estado y notas importantes 
 
 Este proyecto está **activo y en desarrollo**, con incorporación progresiva de nuevos componentes y mejoras.  
-Ideal para probar y extender en otros proyectos frontend.
+Actualmente ya incluye funcionalidades esenciales como:
 
-Algunas de las características y mejoras planificadas incluyen:
+- Diseño **responsive**, adaptado a móviles, tablets y escritorio.  
+- Cambio de tema **claro / oscuro**.  
+- Gestión completa de libros: agregar, editar, eliminar, filtrar y buscar en tiempo real.  
+- Panel de control con selección de secciones.  
+- Estado persistente usando **LocalStorage**.  
 
-- Diseño **responsive** para adaptarse a móviles, tablets y escritorio. ✅  
-- Implementación de **validaciones y medidas de seguridad**.
-- Funcionalidades de **login y registro de usuarios**.
-- Integración de **más productos**: películas, series, juegos, etc.
-- **Opción de descarga** de contenidos o datos.
-- Y muchas otras mejoras y funcionalidades adicionales (**ETC**).
+Próximas mejoras planificadas:  
+
+- Implementación de **validaciones y medidas de seguridad**.  
+- Funcionalidades de **login y registro de usuarios**.  
+- Integración de **más productos**: películas, series, juegos, etc.  
+- **Opción de descarga** de contenidos o datos.  
+- Y otras funcionalidades adicionales (**ETC**).
 
 Estas actualizaciones reflejan el trabajo activo en el proyecto y su crecimiento progresivo.
 
@@ -60,20 +65,22 @@ Estas actualizaciones reflejan el trabajo activo en el proyecto y su crecimiento
 - Seguir un enfoque **modular y fácil de mantener**.  
 - Mantener el proyecto en **evolución continua** como parte de un portfolio profesional.  
 - Demostrar **buenas prácticas en desarrollo frontend moderno**.
-- Garantizar un **diseño responsive**, optimizado para cualquier dispositivo. ✅  
+- Garantizar un **diseño responsive**, optimizado para cualquier dispositivo. 
 
 ---
 
 ## Funcionalidades principales
 
 - Agregar, editar y eliminar libros.  
-- Cambiar disponibilidad de libros (**retirar / devolver**).  
+- Cambiar disponibilidad de libros (retirar / devolver).  
 - Filtrado de libros por estado y por letra inicial.  
 - Buscador en tiempo real.  
-- Cambio de tema **claro / oscuro**.  
+- Cambio de tema claro / oscuro.  
 - Panel de control con selección de secciones.  
-- Estado persistente usando **LocalStorage**.
-- Soporte completo **responsive**, adaptándose a móviles, tablets y escritorio. ✅
+- Estado persistente usando LocalStorage.  
+- Soporte completo **responsive**, adaptándose a móviles, tablets y escritorio.  
+
+> Nota: Todas las funcionalidades anteriores ya están implementadas y listas para usar.
 
 ---
 
