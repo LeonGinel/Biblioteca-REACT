@@ -4,12 +4,8 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  --color-text: white;
-  color: var(--color-text);
   background-color: #242424;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -123,6 +119,7 @@ button {
   font-weight: 500;
   font-family: inherit;
   background-color: var(--color-btns);
+  color: var(--color-text);
   cursor: pointer;
   box-shadow: var(--sombra-btns);
 }
