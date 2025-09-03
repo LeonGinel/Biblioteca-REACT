@@ -40,7 +40,7 @@ body,
 }
 [theme="light"] body::before {
   opacity: 0.7;
-  filter: blur(0.06rem);
+  filter: blur(0.08rem);
 }
 [theme="light"] body::after {
   opacity: 0;
