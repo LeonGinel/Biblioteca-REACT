@@ -32,24 +32,36 @@ export default function PanelControl() {
       <div className={styles["panel-control"]}>
         <button
           onClick={() => {
-            setSeccionActiva("mostrar");
-            setLibroSeleccionadoBuscador(null); // Limpiar selección al cambiar de sección
+            if (seccionActiva === "mostrar") {
+              setSeccionActiva("ninguno");
+            } else {
+              setSeccionActiva("mostrar");
+              setLibroSeleccionadoBuscador(null); // Limpiar selección al cambiar de sección
+            }
           }}
         >
           Mostrar biblioteca
         </button>
         <button
           onClick={() => {
-            setSeccionActiva("agregar");
-            setLibroSeleccionadoBuscador(null);
+            if (seccionActiva === "agregar") {
+              setSeccionActiva("ninguno");
+            } else {
+              setSeccionActiva("agregar");
+              setLibroSeleccionadoBuscador(null);
+            }
           }}
         >
           Agregar
         </button>
         <button
           onClick={() => {
-            setSeccionActiva("buscar");
-            setLibroSeleccionadoBuscador(null);
+            if (seccionActiva === "buscar") {
+              setSeccionActiva("ninguno");
+            } else {
+              setSeccionActiva("buscar");
+              setLibroSeleccionadoBuscador(null);
+            }
           }}
         >
           Buscar

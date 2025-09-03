@@ -29,7 +29,7 @@
 @media (min-width: 786px) {
   #contenedor-principal {
     max-width: 800px;
-    padding: 2rem;
+    padding: 1.5rem;
   }
   h1 {
     font-size: 2.2em;

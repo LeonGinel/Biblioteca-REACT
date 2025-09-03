@@ -9,7 +9,7 @@
   align-items: center;
   justify-content: center;
   gap: 1.2em;
-  margin-bottom: 1rem;
+  margin: 1em auto;
 }
 
 @media (min-width: 576px) {
