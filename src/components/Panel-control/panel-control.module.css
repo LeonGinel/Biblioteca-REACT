@@ -8,15 +8,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2em;
+  gap: 1.2em;
   margin-bottom: 1rem;
 }
 
 @media (min-width: 576px) {
+  .panel-control {
+    gap: 2em;
+  }
 }
 
 @media (min-width: 786px) {
   .panel-control {
+    gap: 2em;
     margin: 1rem;
   }
 }
