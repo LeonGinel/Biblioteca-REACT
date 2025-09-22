@@ -20,7 +20,6 @@ function App() {
     <LibrosProvider>
       <div id="contenedor-principal">
         <h1>MI BIBLIOTECA (Ts + React)</h1>
-
         <Saludo nombre="León" />
         <PanelControl />
       </div>
