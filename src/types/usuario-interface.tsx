@@ -6,4 +6,5 @@ export interface Usuario {
   contraseña: string;
   biblioteca: Categoria[];
   logueado: boolean;
+  rol: "invitado" | "usuario" | "admin";
 }
