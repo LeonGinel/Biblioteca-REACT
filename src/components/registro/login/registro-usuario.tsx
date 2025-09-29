@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import styles from "./panel-control.module.css";
 import type { Usuario } from "../../../types/usuario-interface";
+import { UsuariosContext } from "../../../contexts/usuarios-context";
+import { ToastContainer, toast } from "react-toastify";
 
 export function RegistrarUsuario() {
   const [nombre, setNombre] = useState("");
@@ -9,55 +11,77 @@ export function RegistrarUsuario() {
   const [confirmarContraseña, setConfirmarContraseña] = useState("");
   const [condiciones, setCondiciones] = useState(false);
 
-  const usuariosGuardados = JSON.parse(localStorage.getItem("usuarios") || "[]");
+  const { usuarios, setUsuarios } = useContext(UsuariosContext);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
     if (!nombre || !email || !contraseña) {
-      alert("Completa los campos obligatorios");
+      toast.error("Completa los campos obligatorios");
       return;
     }
 
     if (nombre.trim().length < 3) {
-      alert("El nombre debe contener al menos 3 caracteres");
+      toast.error("El nombre debe contener al menos 3 caracteres");
       return;
     }
 
-    const nombreYaExiste = usuariosGuardados.some((u: Usuario) => u.nombre === nombre);
+    const nombreYaExiste = usuarios.some((u: Usuario) => u.nombre === nombre);
     if (nombreYaExiste) {
-      alert("El nombre de usuario ya existe");
+      toast.error("El nombre de usuario ya existe");
       return;
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
-      alert("Introduce un email válido");
+      toast.error("Introduce un email válido");
       return;
     }
 
-    const emailYaExiste = usuariosGuardados.some((u: Usuario) => u.email === email);
+    const emailYaExiste = usuarios.some((u: Usuario) => u.email === email);
     if (emailYaExiste) {
-      alert("El nombre de usuarioemail introducido ya existe");
+      toast.error("El email introducido ya existe");
       return;
     }
 
     const passwordRegex = /^(?=.*[A-Z])(?=.*[!@#$%^&*(),.?":{}|<>]).{8,}$/;
     if (!passwordRegex.test(contraseña)) {
-      alert("La contraseña debe tener al menos 8 caracteres, una mayúscula y un caracter especial");
+      toast.error("La contraseña debe tener al menos 8 caracteres, una mayúscula y un caracter especial");
       return;
     }
 
     if (contraseña !== confirmarContraseña) {
-      alert("Las contraseñas no coinciden");
+      toast.error("Las contraseñas no coinciden");
       return;
     }
 
     if (condiciones !== true) {
-      alert("Debes aceptar las condiciones");
+      toast.error("Debes aceptar las condiciones");
       return;
     }
+
+    const nuevoUsuario: Usuario = {
+      nombre: nombre,
+      email: email,
+      contraseña: contraseña,
+      biblioteca: [],
+      logueado: false,
+      rol: "usuario",
+    };
+
+    const usuariosActualizado = [...usuarios, nuevoUsuario];
+    setUsuarios(usuariosActualizado);
+    localStorage.setItem("usuarios", JSON.stringify(usuariosActualizado));
+    toast.success("Usuario registrado correctamente!");
+
+    setNombre("");
+    setEmail("");
+    setContraseña("");
+    setConfirmarContraseña("");
+    setCondiciones(false);
   };
+
+  const formularioValido = nombre && email && contraseña && confirmarContraseña && condiciones;
 
   return (
     <div className={styles["contenedor-formulario_registro"]}>
@@ -65,17 +89,35 @@ export function RegistrarUsuario() {
         <h2>¡Regístrate ahora!</h2>
         <div className={styles["formulario_registro-nombre"]}>
           <label htmlFor="nombre">Nombre:</label>
-          <input type="text" name="nombre" id="nombre" className={styles["formulario_registro-input_nombre"]} />
+          <input
+            type="text"
+            name="nombre"
+            id="nombre"
+            className={styles["formulario_registro-input_nombre"]}
+            onChange={(e) => setNombre(e.target.value)}
+          />
         </div>
 
         <div className={styles["formulario_registro-email"]}>
           <label htmlFor="email">Email:</label>
-          <input type="email" name="email" id="email" className={styles["formulario_registro-input_email"]} />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            className={styles["formulario_registro-input_email"]}
+            onChange={(e) => setEmail(e.target.value)}
+          />
         </div>
 
         <div className={styles["formulario_registro-contraseña"]}>
           <label htmlFor="contraseña">Contraseña:</label>
-          <input type="password" name="contraseña" id="contraseña" className={styles["formulario_registro-input_contraseña"]} />
+          <input
+            type="password"
+            name="contraseña"
+            id="contraseña"
+            className={styles["formulario_registro-input_contraseña"]}
+            onChange={(e) => setContraseña(e.target.value)}
+          />
         </div>
 
         <div className={styles["formulario_registro-confirmar_contraseña"]}>
@@ -85,18 +127,22 @@ export function RegistrarUsuario() {
             name="confirmar_contraseña"
             id="confirmar_contraseña"
             className={styles["formulario_registro-input_confirmar_contraseña"]}
+            onChange={(e) => setConfirmarContraseña(e.target.value)}
           />
         </div>
 
         <div className={styles["formulario_registro-aceptar_condiciones"]}>
-          <input type="checkbox" id="acepto" />
+          <input type="checkbox" id="acepto" onChange={(e) => setCondiciones(e.target.checked)} />
           <label htmlFor="acepto">He leído y acepto la política de privacidad y de participación</label>
         </div>
 
         <div>
-          <button className={styles["formulario_registro-btn_confirmar"]}>Confirmar</button>
+          <button className={styles["formulario_registro-btn_confirmar"]} disabled={!formularioValido}>
+            Confirmar
+          </button>
         </div>
       </form>
+      <ToastContainer />
     </div>
   );
 }

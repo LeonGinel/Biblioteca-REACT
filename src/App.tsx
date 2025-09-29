@@ -6,6 +6,8 @@ import { LibrosProvider } from "./contexts/libros-provider";
 import { UsuariosProvider } from "./contexts/usuarios-provider";
 import CambiarTema from "./components/cambio-tema/cambio-tema";
 
+import "react-toastify/dist/ReactToastify.css"; // Libreria React-Toastify
+
 function App() {
   const [tema, setTema] = useState<"light" | "dark">(() => {
     const temaGuardado = localStorage.getItem("tema");
