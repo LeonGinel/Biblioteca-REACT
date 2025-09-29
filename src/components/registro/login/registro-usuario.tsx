@@ -1,9 +1,52 @@
+import React, { useState } from "react";
 import styles from "./panel-control.module.css";
 
 export function RegistrarUsuario() {
+  const [nombre, setNombre] = useState("");
+  const [email, setEmail] = useState("");
+  const [contraseña, setContraseña] = useState("");
+  const [confirmarContraseña, setConfirmarContraseña] = useState("");
+  const [condiciones, setCondiciones] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!nombre || !email || !contraseña) {
+      alert("Completa los campos obligatorios");
+      return;
+    }
+
+    if (nombre.trim().length < 3) {
+      alert("El nombre debe contener al menos 3 caracteres");
+      return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      alert("Introduce un email válido");
+      return;
+    }
+
+    const passwordRegex = /^(?=.*[A-Z])(?=.*[!@#$%^&*(),.?":{}|<>]).{8,}$/;
+    if (!passwordRegex.test(contraseña)) {
+      alert("La contraseña debe tener al menos 8 caracteres, una mayúscula y un caracter especial");
+      return;
+    }
+
+    if (contraseña !== confirmarContraseña) {
+      alert("Las contraseñas no coinciden");
+      return;
+    }
+
+    if (condiciones !== true) {
+      alert("Debes aceptar las condiciones");
+      return;
+    }
+  };
+
   return (
     <div className={styles["contenedor-formulario_registro"]}>
-      <form className={styles["formulario_registro"]}>
+      <form className={styles["formulario_registro"]} onSubmit={handleSubmit}>
         <h2>¡Regístrate ahora!</h2>
         <div className={styles["formulario_registro-nombre"]}>
           <label htmlFor="nombre">Nombre:</label>
