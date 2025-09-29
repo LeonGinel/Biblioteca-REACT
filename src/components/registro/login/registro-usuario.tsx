@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from "./panel-control.module.css";
+import type { Usuario } from "../../../types/usuario-interface";
 
 export function RegistrarUsuario() {
   const [nombre, setNombre] = useState("");
@@ -7,6 +8,8 @@ export function RegistrarUsuario() {
   const [contraseña, setContraseña] = useState("");
   const [confirmarContraseña, setConfirmarContraseña] = useState("");
   const [condiciones, setCondiciones] = useState(false);
+
+  const usuariosGuardados = JSON.parse(localStorage.getItem("usuarios") || "[]");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -21,9 +24,21 @@ export function RegistrarUsuario() {
       return;
     }
 
+    const nombreYaExiste = usuariosGuardados.some((u: Usuario) => u.nombre === nombre);
+    if (nombreYaExiste) {
+      alert("El nombre de usuario ya existe");
+      return;
+    }
+
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       alert("Introduce un email válido");
+      return;
+    }
+
+    const emailYaExiste = usuariosGuardados.some((u: Usuario) => u.email === email);
+    if (emailYaExiste) {
+      alert("El nombre de usuarioemail introducido ya existe");
       return;
     }
 
