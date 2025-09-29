@@ -5,11 +5,25 @@ import { UsuariosContext } from "../../../contexts/usuarios-context";
 import { ToastContainer, toast } from "react-toastify";
 
 export function RegistrarUsuario() {
-  const [nombre, setNombre] = useState("");
-  const [email, setEmail] = useState("");
-  const [contraseña, setContraseña] = useState("");
-  const [confirmarContraseña, setConfirmarContraseña] = useState("");
-  const [condiciones, setCondiciones] = useState(false);
+  const [usuarioValido, setUsuarioValido] = useState({
+    nombre: { valor: "", valido: null, mensaje: "" },
+    email: { valor: "", valido: null, mensaje: "" },
+    contraseña: { valor: "", valido: null, mensaje: "" },
+    confirmarContraseña: { valor: "", valido: null, mensaje: "" },
+    condiciones: { valor: false, valido: null, mensaje: "" },
+  });
+
+  // const [nombre, setNombre] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [contraseña, setContraseña] = useState("");
+  // const [confirmarContraseña, setConfirmarContraseña] = useState("");
+  // const [condiciones, setCondiciones] = useState(false);
+
+  // const [nombreValido, setNombreValid] = useState<boolean | null>(null);
+  // const [emailValido, setEmailValido] = useState<boolean | null>(null);
+  // const [contraseñaValida, setContraseñaValida] = useState<boolean | null>(null);
+  // const [confirmarContraseñaValida, setConfirmarContraseñaValida] = useState<boolean | null>(null);
+  // const [condicionesValido, setCondicionesValido] = useState<boolean | null>(null);
 
   const { usuarios, setUsuarios } = useContext(UsuariosContext);
 
