@@ -20,8 +20,8 @@ Actualmente ya incluye funcionalidades esenciales como:
 
 Próximas mejoras planificadas:  
 
-- Implementación de **validaciones y medidas de seguridad**.  
-- Funcionalidades de **login y registro de usuarios**.  
+- Implementación de **validaciones y medidas de seguridad**.  ![En proceso](https://img.shields.io/badge/En%20proceso-✔️-brightgreen)
+- Funcionalidades de **login y registro de usuarios**.  ![En proceso](https://img.shields.io/badge/En%20proceso-✔️-brightgreen)
 - Integración de **más productos**: películas, series, juegos, etc.  
 - **Opción de descarga** de contenidos o datos.  
 - Y otras funcionalidades adicionales (**ETC**).
