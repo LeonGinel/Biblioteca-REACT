@@ -47,29 +47,29 @@ export function RegistrarUsuario() {
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
+    if (!emailRegex.test(usuarioValido.email.valor)) {
       toast.error("Introduce un email válido");
       return;
     }
 
-    const emailYaExiste = usuarios.some((u: Usuario) => u.email === email);
+    const emailYaExiste = usuarios.some((u: Usuario) => u.email === usuarioValido.email.valor);
     if (emailYaExiste) {
       toast.error("El email introducido ya existe");
       return;
     }
 
     const passwordRegex = /^(?=.*[A-Z])(?=.*[!@#$%^&*(),.?":{}|<>]).{8,}$/;
-    if (!passwordRegex.test(contraseña)) {
+    if (!passwordRegex.test(usuarioValido.contraseña.valor)) {
       toast.error("La contraseña debe tener al menos 8 caracteres, una mayúscula y un caracter especial");
       return;
     }
 
-    if (contraseña !== confirmarContraseña) {
+    if (usuarioValido.contraseña.valor !== usuarioValido.confirmarContraseña.valor) {
       toast.error("Las contraseñas no coinciden");
       return;
     }
 
-    if (condiciones !== true) {
+    if (usuarioValido.condiciones.valor !== true) {
       toast.error("Debes aceptar las condiciones");
       return;
     }
