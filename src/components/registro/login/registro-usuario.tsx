@@ -75,9 +75,9 @@ export function RegistrarUsuario() {
     }
 
     const nuevoUsuario: Usuario = {
-      nombre: nombre,
-      email: email,
-      contraseña: contraseña,
+      nombre: usuarioValido.nombre.valor,
+      email: usuarioValido.email.valor,
+      contraseña: usuarioValido.contraseña.valor,
       biblioteca: [],
       logueado: false,
       rol: "usuario",
