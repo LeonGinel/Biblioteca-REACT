@@ -30,7 +30,7 @@ export function RegistrarUsuario() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!nombre || !email || !contraseña) {
+    if (!usuarioValido.nombre || !usuarioValido.email || !usuarioValido.contraseña) {
       toast.error("Completa los campos obligatorios");
       return;
     }
