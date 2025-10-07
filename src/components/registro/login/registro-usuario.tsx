@@ -35,12 +35,12 @@ export function RegistrarUsuario() {
       return;
     }
 
-    if (nombre.trim().length < 3) {
+    if (usuarioValido.nombre.valor.trim().length < 3) {
       toast.error("El nombre debe contener al menos 3 caracteres");
       return;
     }
 
-    const nombreYaExiste = usuarios.some((u: Usuario) => u.nombre === nombre);
+    const nombreYaExiste = usuarios.some((u: Usuario) => u.nombre === usuarioValido.nombre.valor);
     if (nombreYaExiste) {
       toast.error("El nombre de usuario ya existe");
       return;
