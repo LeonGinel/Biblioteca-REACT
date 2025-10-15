@@ -87,20 +87,14 @@ export function RegistrarUsuario() {
     setUsuarios(usuariosActualizado);
     localStorage.setItem("usuarios", JSON.stringify(usuariosActualizado));
     toast.success("Usuario registrado correctamente!");
-
-    setNombre("");
-    setEmail("");
-    setContraseña("");
-    setConfirmarContraseña("");
-    setCondiciones(false);
   };
 
   const formularioValido =
-    usuarioValido.nombre &&
-    usuarioValido.email &&
-    usuarioValido.contraseña &&
-    usuarioValido.confirmarContraseña &&
-    usuarioValido.condiciones;
+    usuarioValido.nombre.valor &&
+    usuarioValido.email.valor &&
+    usuarioValido.contraseña.valor &&
+    usuarioValido.confirmarContraseña.valor &&
+    usuarioValido.condiciones.valor;
 
   return (
     <div className={styles["contenedor-formulario_registro"]}>
