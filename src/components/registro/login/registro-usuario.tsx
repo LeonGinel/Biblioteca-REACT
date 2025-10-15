@@ -95,7 +95,12 @@ export function RegistrarUsuario() {
     setCondiciones(false);
   };
 
-  const formularioValido = nombre && email && contraseña && confirmarContraseña && condiciones;
+  const formularioValido =
+    usuarioValido.nombre &&
+    usuarioValido.email &&
+    usuarioValido.contraseña &&
+    usuarioValido.confirmarContraseña &&
+    usuarioValido.condiciones;
 
   return (
     <div className={styles["contenedor-formulario_registro"]}>
@@ -108,7 +113,7 @@ export function RegistrarUsuario() {
             name="nombre"
             id="nombre"
             className={styles["formulario_registro-input_nombre"]}
-            onChange={(e) => setNombre(e.target.value)}
+            onChange={(e) => setUsuarioValido((prev) => ({ ...prev, nombre: { valor: e.target.value, valido: null, mensaje: "" } }))}
           />
         </div>
 
@@ -119,7 +124,7 @@ export function RegistrarUsuario() {
             name="email"
             id="email"
             className={styles["formulario_registro-input_email"]}
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={(e) => setUsuarioValido((prev) => ({ ...prev, email: { valor: e.target.value, valido: null, mensaje: "" } }))}
           />
         </div>
 
@@ -130,7 +135,7 @@ export function RegistrarUsuario() {
             name="contraseña"
             id="contraseña"
             className={styles["formulario_registro-input_contraseña"]}
-            onChange={(e) => setContraseña(e.target.value)}
+            onChange={(e) => setUsuarioValido((prev) => ({ ...prev, contraseña: { valor: e.target.value, valido: null, mensaje: "" } }))}
           />
         </div>
 
@@ -141,12 +146,18 @@ export function RegistrarUsuario() {
             name="confirmar_contraseña"
             id="confirmar_contraseña"
             className={styles["formulario_registro-input_confirmar_contraseña"]}
-            onChange={(e) => setConfirmarContraseña(e.target.value)}
+            onChange={(e) =>
+              setUsuarioValido((prev) => ({ ...prev, confirmarContraseña: { valor: e.target.value, valido: null, mensaje: "" } }))
+            }
           />
         </div>
 
         <div className={styles["formulario_registro-aceptar_condiciones"]}>
-          <input type="checkbox" id="acepto" onChange={(e) => setCondiciones(e.target.checked)} />
+          <input
+            type="checkbox"
+            id="acepto"
+            onChange={(e) => setUsuarioValido((prev) => ({ ...prev, condiciones: { valor: e.target.checked, valido: null, mensaje: "" } }))}
+          />
           <label htmlFor="acepto">He leído y acepto la política de privacidad y de participación</label>
         </div>
 
