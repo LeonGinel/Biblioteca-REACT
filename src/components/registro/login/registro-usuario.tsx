@@ -13,18 +13,6 @@ export function RegistrarUsuario() {
     condiciones: { valor: false, valido: null, mensaje: "" },
   });
 
-  // const [nombre, setNombre] = useState("");
-  // const [email, setEmail] = useState("");
-  // const [contraseña, setContraseña] = useState("");
-  // const [confirmarContraseña, setConfirmarContraseña] = useState("");
-  // const [condiciones, setCondiciones] = useState(false);
-
-  // const [nombreValido, setNombreValid] = useState<boolean | null>(null);
-  // const [emailValido, setEmailValido] = useState<boolean | null>(null);
-  // const [contraseñaValida, setContraseñaValida] = useState<boolean | null>(null);
-  // const [confirmarContraseñaValida, setConfirmarContraseñaValida] = useState<boolean | null>(null);
-  // const [condicionesValido, setCondicionesValido] = useState<boolean | null>(null);
-
   const { usuarios, setUsuarios } = useContext(UsuariosContext);
 
   const handleSubmit = (e: React.FormEvent) => {
