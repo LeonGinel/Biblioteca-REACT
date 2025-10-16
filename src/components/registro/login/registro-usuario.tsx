@@ -1,3 +1,7 @@
+// SIGUIENTE PUNTO:
+// - Decidir lo de los toast o mesajes en los inputs
+// - Comentar el componente
+
 import React, { useContext, useState } from "react";
 import styles from "./panel-control.module.css";
 import type { Usuario } from "../../../types/usuario-interface";
