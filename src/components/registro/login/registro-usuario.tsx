@@ -3,7 +3,7 @@
 // - Comentar el componente
 
 import React, { useContext, useState } from "react";
-import styles from "./panel-control.module.css";
+import styles from "./registro-usuario.module.css";
 import type { Usuario } from "../../../types/usuario-interface";
 import { UsuariosContext } from "../../../contexts/usuarios-context";
 import { ToastContainer, toast } from "react-toastify";
@@ -22,7 +22,7 @@ export function RegistrarUsuario() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!usuarioValido.nombre || !usuarioValido.email || !usuarioValido.contraseña) {
+    if (!usuarioValido.nombre.valor || !usuarioValido.email.valor || !usuarioValido.contraseña.valor) {
       toast.error("Completa los campos obligatorios");
       return;
     }

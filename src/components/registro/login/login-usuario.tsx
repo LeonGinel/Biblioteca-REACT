@@ -1,4 +1,4 @@
-import styles from "./panel-control.module.css";
+import styles from "../../Panel-control/panel-control.module.css";
 
 export function RegistrarUsuario() {
   return (

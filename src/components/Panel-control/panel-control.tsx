@@ -6,6 +6,7 @@
  *  - Mostrar la biblioteca completa
  *  - Agregar un nuevo libro
  *  - Buscar un libro específico
+ *  - Registrar un nuevo usuario
  *
  * Controla qué sección se muestra mediante el estado `seccionActiva`.
  * También maneja la selección de un libro desde el buscador con `libroSeleccionadoBuscador`.
@@ -18,10 +19,13 @@ import MostrarLibros from "../acciones/mostrar-libros";
 import AgregarLibro from "../formularios/agregar-libro";
 import BuscadorLibros from "../buscador/buscador-libros";
 import type { Libro } from "../../types/libro-interface";
+import { RegistrarUsuario } from "../registro/login/registro-usuario";
 
 export default function PanelControl() {
   // Estado que indica qué sección está activa
-  const [seccionActiva, setSeccionActiva] = useState<"mostrar" | "agregar" | "eliminar" | "editar" | "buscar" | "ninguno">("ninguno");
+  const [seccionActiva, setSeccionActiva] = useState<
+    "mostrar" | "agregar" | "eliminar" | "editar" | "buscar" | "registro" | "ninguno"
+  >("ninguno");
 
   // Estado que guarda el libro seleccionado desde el buscador
   const [libroSeleccionadoBuscador, setLibroSeleccionadoBuscador] = useState<Libro | null>(null);
@@ -66,6 +70,18 @@ export default function PanelControl() {
         >
           Buscar
         </button>
+        <button
+          onClick={() => {
+            if (seccionActiva === "registro") {
+              setSeccionActiva("ninguno");
+            } else {
+              setSeccionActiva("registro");
+              setLibroSeleccionadoBuscador(null);
+            }
+          }}
+        >
+          Registro
+        </button>
       </div>
 
       {/* Renderizado condicional según la sección activa */}
@@ -78,6 +94,7 @@ export default function PanelControl() {
         {/* Mostrar la tarjeta del libro seleccionado en el buscador */}
         {libroSeleccionadoBuscador === null ? <></> : <LibroCard libro={libroSeleccionadoBuscador} />}
       </div>
+      <div className={styles["contenedor-registro"]}>{seccionActiva === "registro" && <RegistrarUsuario />}</div>
     </div>
   );
 }
