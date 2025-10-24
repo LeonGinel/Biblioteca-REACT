@@ -18,14 +18,29 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  width: 100%;
+  gap: 0.5rem;
 }
-.ano input,
-.check input {
-  width: 20%;
+.ano input {
+  width: 25%;
+}
+.check input[type="checkbox"] {
+  width: 1.2rem;
+  height: 1.2rem;
+  flex-shrink: 0;
 }
 
 @media (min-width: 576px) {
+  .titulo input,
+  .autor input,
+  .ano input,
+  .check input {
+    padding: 0.2rem;
+    padding-left: 0.5em;
+    border: 0.1em solid #ddd;
+    border-radius: 0.4rem;
+    font-size: 0.8rem;
+  }
 }
 
 @media (min-width: 786px) {

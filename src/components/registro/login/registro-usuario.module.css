@@ -1,0 +1,106 @@
+.contenedor-formulario_registro {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  padding: 1rem;
+}
+
+.formulario_registro {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 720px;
+  padding: 1rem;
+  border-style: solid;
+  border-width: 0.1rem;
+  border-radius: 1rem;
+}
+
+.formulario_registro h2 {
+  margin: 0;
+  text-align: center;
+}
+
+.formulario_registro-nombre,
+.formulario_registro-email,
+.formulario_registro-contraseña,
+.formulario_registro-confirmar_contraseña {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: nowrap;
+}
+
+/* Evitar que el texto del label salte de línea, ej: "Confirmar Contraseña" */
+.formulario_registro-nombre label,
+.formulario_registro-email label,
+.formulario_registro-contraseña label,
+.formulario_registro-confirmar_contraseña label {
+  white-space: nowrap;
+}
+
+.formulario_registro-input_nombre,
+.formulario_registro-input_email,
+.formulario_registro-input_contraseña,
+.formulario_registro-input_confirmar_contraseña {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #d0d0d0;
+  border-radius: 6px;
+  outline: none;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.formulario_registro-aceptar_condiciones {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.formulario_registro-btn_confirmar {
+  width: auto;
+}
+
+.formulario_registro-btn_confirmar:disabled {
+  background-color: #a9c6e6;
+  cursor: not-allowed;
+}
+
+/* Checkbox igual que en otros formularios */
+.formulario_registro-aceptar_condiciones input[type="checkbox"] {
+  width: 1.2rem;
+  height: 1.2rem;
+  flex-shrink: 0;
+}
+
+@media (min-width: 576px) {
+  .formulario_registro-input_nombre,
+  .formulario_registro-input_email,
+  .formulario_registro-input_contraseña,
+  .formulario_registro-input_confirmar_contraseña,
+  .formulario_registro-aceptar_condiciones input {
+    padding: 0.2rem;
+    padding-left: 0.5em;
+    border: 0.1em solid #ddd;
+    border-radius: 0.4rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 786px) {
+  .formulario_registro {
+    display: grid;
+    gap: 0.5rem;
+    padding: 1rem;
+    border-style: solid;
+  }
+  .formulario_registro-nombre,
+  .formulario_registro-email,
+  .formulario_registro-contraseña,
+  .formulario_registro-confirmar_contraseña {
+    font-size: 1.2em;
+  }
+}
