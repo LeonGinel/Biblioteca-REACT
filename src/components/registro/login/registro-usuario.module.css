@@ -54,6 +54,27 @@
   min-width: 0;
 }
 
+.input-error {
+  border: 1px solid #d93025;
+}
+
+.mensaje-error {
+  color: #d93025;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.mensaje-exito {
+  width: 100%;
+  margin: 0;
+  padding: 0.5rem 0.75rem;
+  background-color: #e6f4ea;
+  color: #137333;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: 500;
+}
+
 .formulario_registro-aceptar_condiciones {
   display: flex;
   align-items: center;
@@ -87,6 +108,10 @@
     border: 0.1em solid #ddd;
     border-radius: 0.4rem;
     font-size: 0.8rem;
+  }
+
+  .input-error {
+    border: 0.1em solid #d93025;
   }
 }
 
