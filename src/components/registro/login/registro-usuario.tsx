@@ -150,10 +150,7 @@ export function RegistrarUsuario() {
       nombre: validarNombre(usuarioValido.nombre.valor),
       email: validarEmail(usuarioValido.email.valor),
       contraseña: validarContraseña(usuarioValido.contraseña.valor),
-      confirmarContraseña: validarConfirmarContraseña(
-        usuarioValido.confirmarContraseña.valor,
-        usuarioValido.contraseña.valor
-      ),
+      confirmarContraseña: validarConfirmarContraseña(usuarioValido.confirmarContraseña.valor, usuarioValido.contraseña.valor),
       condiciones: validarCondiciones(usuarioValido.condiciones.valor),
     } satisfies Record<keyof UsuarioValidoState, ValidationResult>;
 
@@ -221,9 +218,7 @@ export function RegistrarUsuario() {
             onBlur={() => actualizarCampo("nombre", validarNombre(usuarioValido.nombre.valor))}
           />
         </div>
-        {usuarioValido.nombre.valido === false && (
-          <p className={styles["mensaje-error"]}>{usuarioValido.nombre.mensaje}</p>
-        )}
+        {usuarioValido.nombre.valido === false && <p className={styles["mensaje-error"]}>{usuarioValido.nombre.mensaje}</p>}
 
         <div className={styles["formulario_registro-email"]}>
           <label htmlFor="email">Email:</label>
@@ -231,9 +226,7 @@ export function RegistrarUsuario() {
             type="email"
             name="email"
             id="email"
-            className={`${styles["formulario_registro-input_email"]} ${
-              usuarioValido.email.valido === false ? styles["input-error"] : ""
-            }`}
+            className={`${styles["formulario_registro-input_email"]} ${usuarioValido.email.valido === false ? styles["input-error"] : ""}`}
             value={usuarioValido.email.valor}
             onChange={(e) => {
               const valor = e.target.value;
@@ -246,9 +239,7 @@ export function RegistrarUsuario() {
             onBlur={() => actualizarCampo("email", validarEmail(usuarioValido.email.valor))}
           />
         </div>
-        {usuarioValido.email.valido === false && (
-          <p className={styles["mensaje-error"]}>{usuarioValido.email.mensaje}</p>
-        )}
+        {usuarioValido.email.valido === false && <p className={styles["mensaje-error"]}>{usuarioValido.email.mensaje}</p>}
 
         <div className={styles["formulario_registro-contraseña"]}>
           <label htmlFor="contraseña">Contraseña:</label>
@@ -274,9 +265,7 @@ export function RegistrarUsuario() {
             onBlur={() => actualizarCampo("contraseña", validarContraseña(usuarioValido.contraseña.valor))}
           />
         </div>
-        {usuarioValido.contraseña.valido === false && (
-          <p className={styles["mensaje-error"]}>{usuarioValido.contraseña.mensaje}</p>
-        )}
+        {usuarioValido.contraseña.valido === false && <p className={styles["mensaje-error"]}>{usuarioValido.contraseña.mensaje}</p>}
 
         <div className={styles["formulario_registro-confirmar_contraseña"]}>
           <label htmlFor="confirmar_contraseña">Confirmar Contraseña:</label>
@@ -299,10 +288,7 @@ export function RegistrarUsuario() {
             onBlur={() =>
               actualizarCampo(
                 "confirmarContraseña",
-                validarConfirmarContraseña(
-                  usuarioValido.confirmarContraseña.valor,
-                  usuarioValido.contraseña.valor
-                )
+                validarConfirmarContraseña(usuarioValido.confirmarContraseña.valor, usuarioValido.contraseña.valor)
               )
             }
           />
@@ -332,9 +318,7 @@ export function RegistrarUsuario() {
           />
           <label htmlFor="acepto">He leído y acepto la política de privacidad y de participación</label>
         </div>
-        {usuarioValido.condiciones.valido === false && (
-          <p className={styles["mensaje-error"]}>{usuarioValido.condiciones.mensaje}</p>
-        )}
+        {usuarioValido.condiciones.valido === false && <p className={styles["mensaje-error"]}>{usuarioValido.condiciones.mensaje}</p>}
 
         <div>
           <button className={styles["formulario_registro-btn_confirmar"]} disabled={!formularioValido}>
