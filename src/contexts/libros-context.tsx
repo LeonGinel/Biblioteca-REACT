@@ -8,9 +8,6 @@
  * LibrosContext proporciona:
  *  - libros: array de libros actual
  *  - setLibros: función para actualizar la lista de libros
- *
- * Nota: Es uno de mis primeros usos de Context en React, diseñado sencillo para aprender cómo
- * compartir estado global sin usar props manualmente.
  */
 
 import React, { createContext } from "react";

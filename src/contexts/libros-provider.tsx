@@ -9,8 +9,6 @@
  * Además:
  *  - Inicializa los libros desde el localStorage para mantener los datos entre recargas.
  *  - Guarda automáticamente los cambios en localStorage cada vez que se actualiza la lista.
- *
- * Nota: Es una forma sencilla de aprender cómo usar Context y persistencia con React.
  */
 
 import { useState, useEffect, type ReactNode } from "react";
