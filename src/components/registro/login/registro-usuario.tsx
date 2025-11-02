@@ -1,6 +1,16 @@
-// SIGUIENTE PUNTO:
-// - Decidir lo de los toast o mesajes en los inputs
-// - Comentar el componente
+/**
+ * Componente: RegistrarUsuario
+ * -----------------------------
+ * Formulario completo para registrar nuevos usuarios dentro de la aplicación.
+ *
+ * Funcionalidades principales:
+ *  - Valida cada campo (nombre, email, contraseña, confirmación y aceptación de condiciones) con mensajes personalizados.
+ *  - Impide la creación de usuarios duplicados comprobando nombre y correo contra el contexto global.
+ *  - Persiste los usuarios registrados en localStorage y muestra mensajes de éxito o error según corresponda.
+ *
+ * Notas de mejora:
+ *  - (Pendiente) Centralizar la gestión de toasts o mensajes visuales para feedback más visible.
+ */
 
 import React, { useContext, useState } from "react";
 import styles from "./registro-usuario.module.css";
