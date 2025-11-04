@@ -10,6 +10,7 @@
  *
  * Notas de mejora:
  *  - (Pendiente) Centralizar la gestión de toasts o mensajes visuales para feedback más visible.
+ *  - Solo debe haber un useState global del formulario.
  */
 
 import React, { useContext, useState } from "react";
