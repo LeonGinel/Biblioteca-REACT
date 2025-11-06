@@ -9,7 +9,7 @@
  *  - Persiste los usuarios registrados en localStorage y muestra mensajes de éxito o error según corresponda.
  *
  * Notas de mejora:
- *  - (Pendiente) Centralizar la gestión de toasts o mensajes visuales para feedback más visible.
+ *  - (Pendiente) Centralizar la gestión de toasts o mensajes visuales para feedback más visible, todos los errores de una vez.
  *  - Solo debe haber un useState global del formulario.
  */
 
